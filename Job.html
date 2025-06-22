@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HARCREW – Stellenangebote</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      background-color: #fff;
+    }
+
+    /* Top Section Styles */
+    .top-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100vw;
+      padding: 20px 0;
+      background-color: white;
+    }
+
+    .bar-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .bar {
+      width: 100%;
+      height: 20px;
+      background-color: #2e2e2e;
+    }
+
+    .logo {
+      height: 120px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* Navbar Styles */
+    nav {
+      border-top: 1px solid #eee;
+      border-bottom: 5px solid #333;
+      background-color: white;
+    }
+
+    .navbar-nav .nav-link {
+      color: #000;
+      padding: 10px 15px;
+    }
+
+    .navbar-nav .nav-link.active {
+      color: #c2ae9b;
+    }
+
+    /* Floating Facebook Button */
+    .floating-facebook {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #3a3a3a;
+      color: #fff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    .floating-facebook:hover {
+      background-color: #2d4373;
+    }
+
+    /* Job Offers Section */
+    .job-header {
+      background-color: #333;
+      color: #c7b299;
+      padding: 40px 0;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .job-section {
+      padding: 60px 20px;
+    }
+
+    .job-image {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .job-title {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .job-subtitle {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #444;
+      letter-spacing: 0.5px;
+    }
+
+    .job-description {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .job-text-container {
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .job-section .row {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .job-image {
+        width: 100%;
+      }
+
+      .col-md-6 {
+        padding: 0 !important;
+      }
+
+      .job-text-container {
+        padding: 0 10px;
+      }
+    }
+    footer {
+        background-color: #3a3a3a;
+        color: #d5d5d5;
+        padding: 60px 20px 0;
+        text-align: center;
+        /* Center everything */
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* Center columns */
+        gap: 40px;
+    }
+
+    .footer-column {
+        min-width: 200px;
+        max-width: 250px;
+        margin-bottom: 30px;
+    }
+
+    .footer-column h4 {
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #a5a5a5;
+        margin-bottom: 12px;
+    }
+
+    .footer-column p,
+    .footer-column a {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #c7b299;
+        text-decoration: none;
+        margin: 4px 0;
+        display: inline-block;
+    }
+
+    .footer-column a:hover {
+        color: #c7b299;
+        text-decoration: underline;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #d2b48c;
+        padding: 15px 20px;
+        font-size: 13px;
+        color: #c7b299;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .footer-bottom a {
+        color: #c7b299;
+        text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-column {
+            margin-bottom: 25px;
+        }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Section -->
+  <div class="top-section">
+    <div class="bar-column">
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+    </div>
+    <img src="logo.png" alt="HairCrew Logo" class="logo">
+    <div class="bar-column">
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="Start.html">Start</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">Kontakt</a></li>
+          <li class="nav-item"><a class="nav-link" href="Directions.html">Anfahrt</a></li>
+          <li class="nav-item"><a class="nav-link" href="Price.html">Preisliste</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Job.html">Stellenangebote</a></li>
+          <li class="nav-item"><a class="nav-link" href="imprint.html">Impressum</a></li>
+          <li class="nav-item"><a class="nav-link" href="Data.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Job Header -->
+  <div class="job-header">Stellenangebote</div>
+
+  <!-- Job Section -->
+  <div class="container job-section">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-6 text-center mb-4 mb-md-0">
+        <img src="jobs.jpg" alt="Friseur Gesucht" class="job-image" />
+      </div>
+      <div class="col-md-6 d-flex align-items-center">
+        <div class="job-text-container text-center">
+          <h2 class="job-title">WIR SUCHEN DICH</h2>
+          <p class="job-subtitle">FRISEUR M/W IN TEILZEIT ODER VOLLZEIT GESUCHT!!!</p>
+          <p class="job-description">
+            Zur Verstärkung unseres Teams suchen wir ab sofort einen engagierten Friseur (m/w) in Teilzeit oder Vollzeit.
+          </p>
+          <p class="job-description">
+            Bei Interesse sende uns bitte deine Bewerbung schriftlich an:
+          </p>
+          <p class="job-description">
+            N-Haircrew<br>
+            Hirschgasse 3, 74613 Öhringen<br>
+            oder ruf uns einfach an unter: 07941 9595 480
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Öffnungszeiten</h4>
+                <p>Dienstag - Mittwoch<br>09:00 Uhr – 20:00 Uhr</p>
+                <p>Donnerstag – Freitag<br>9:00 Uhr – 18:30 Uhr</p>
+                <p>Samstag<br>8:00 Uhr – 14:00 Uhr</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Hier finden Sie uns</h4>
+                <p>Hirschgasse 3<br>74613 Öhringen</p>
+                <a href="#">Google Maps Karte</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Telefon und E-Mail</h4>
+                <p>07941-9595 480</p>
+                <a href="mailto:info@n-haircrew.de">info@n-haircrew.de</a><br>
+                <a href="#">Kontakt</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Rechtliches</h4>
+                <a href="#">Impressum</a><br>
+                <a href="#">Datenschutz</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            Webdesign und Gestaltung: <a href="https://www.i-love-design.de" target="_blank">www.i-love-design.de</a>
+        </div>
+    </footer>
+
+
+  <!-- Floating Facebook Icon -->
+  <a href="https://www.facebook.com/nhaircrew" class="floating-facebook" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
