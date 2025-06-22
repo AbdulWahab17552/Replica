@@ -1,0 +1,394 @@
+ body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   overflow-x: hidden;
+ }
+
+ .top-section {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   width: 100vw;
+   padding: 20px 0;
+   background-color: white;
+ }
+
+ .bar-column {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 8px;
+   flex: 1;
+ }
+
+ .bar {
+   width: 100%;
+   height: 20px;
+   background-color: #2e2e2e;
+ }
+
+ .logo {
+   height: 120px;
+   width: auto;
+   object-fit: contain;
+ }
+
+ nav {
+   border-top: 1px solid #eee;
+   border-bottom: 5px solid #333;
+ }
+
+ .navbar-nav .nav-link {
+   color: #000;
+   padding: 10px 15px;
+ }
+
+ .navbar-nav .nav-link.active {
+   color: #c2ae9b;
+ }
+
+ .team-section {
+   background-color: #2e2e2e;
+   color: #c2ae9b;
+   text-align: center;
+   padding: 60px 20px;
+ }
+
+ .team-image-wrapper {
+   background-color: #f3f1f4;
+   padding: 20px;
+   border-radius: 8px;
+   max-width: 700px;
+   margin: 0 auto;
+ }
+
+ .team-image-wrapper img {
+   width: 100%;
+   border-radius: 6px;
+ }
+
+ .about-section {
+   background-color: #fff;
+   color: #2e2e2e;
+ }
+
+ .about-section h2 {
+   font-size: 2.5rem;
+   color: #000;
+ }
+
+ .about-section p {
+   line-height: 1.7;
+ }
+
+ .facebook-section {
+   background-color: #2e2e2e;
+   padding: 60px 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .facebook-container {
+   background-color: #fff;
+   border-radius: 8px;
+   max-width: 700px;
+   width: 100%;
+   padding: 20px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ }
+
+ .facebook-posts {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   max-height: 600px;
+   overflow-y: auto;
+ }
+
+ .fb-post {
+   background: #fff;
+   border: 1px solid #dddfe2;
+   border-radius: 8px;
+   padding: 12px;
+   text-align: left;
+   width: 100%;
+   transition: transform 0.2s;
+ }
+
+ .fb-post:hover {
+   transform: scale(1.02);
+ }
+
+ .fb-post img {
+   width: 100%;
+   height: auto;
+   border-radius: 8px;
+   margin-top: 8px;
+ }
+
+ .fb-actions {
+   display: flex;
+   justify-content: space-around;
+   margin-top: 8px;
+   color: #3b5998;
+ }
+
+ .facebook-icon {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   background-color: #2e2e2e;
+   color: white;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   text-align: center;
+   line-height: 50px;
+   font-size: 24px;
+   z-index: 1000;
+   transition: background-color 0.3s ease;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+ }
+
+ .facebook-icon:hover {
+   background-color: #3b5998;
+ }
+
+ .video-row-section {
+   display: flex;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+   flex-wrap: wrap;
+ }
+
+ .video-box {
+   flex: 1;
+   position: relative;
+   min-width: 50%;
+   height: 60vh;
+ }
+
+ .video-box video {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+
+ .video-overlay-text {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 20px;
+   background-color: rgba(255, 255, 255, 0.7);
+   color: #2e2e2e;
+   text-align: center;
+   font-size: 1.2rem;
+   z-index: 2;
+ }
+
+ .price-btn {
+   display: inline-block;
+   background-color: #2e2e2e;
+   color: #c2ae9b;
+   padding: 10px 25px;
+   font-size: 1.1rem;
+   font-weight: bold;
+   text-decoration: none;
+   border-radius: 4px;
+   transition: all 0.3s ease;
+ }
+
+ .price-btn:hover {
+   background-color: #782020;
+   color: #e5d4c3;
+ }
+
+ .appointment-section {
+   position: relative;
+   width: 100%;
+   height: auto;
+   text-align: center;
+   overflow: hidden;
+ }
+
+ .appointment-image {
+   width: 100%;
+   height: auto;
+   display: block;
+ }
+
+ .appointment-text {
+   position: absolute;
+   top: 20px;
+   width: 100%;
+   text-align: center;
+   color: white;
+   font-size: 2rem;
+   font-weight: bold;
+   text-shadow: 1px 1px 4px #000;
+ }
+
+ @media (max-width: 768px) {
+   .logo {
+     height: 90px;
+   }
+
+   .bar {
+     height: 16px;
+   }
+
+   .facebook-container {
+     max-width: 90%;
+     padding: 10px;
+   }
+
+   .facebook-posts {
+     max-height: 500px;
+   }
+
+   .fb-post {
+     padding: 10px;
+   }
+
+   .video-row-section {
+     flex-direction: column;
+     height: auto;
+   }
+
+   .video-box {
+     min-width: 100%;
+     height: 50vh;
+   }
+
+   .video-overlay-text {
+     font-size: 1rem;
+     padding: 12px;
+   }
+
+   .appointment-text {
+     font-size: 1.4rem;
+   }
+ }
+
+ footer {
+   background-color: #3a3a3a;
+   color: #d5d5d5;
+   padding: 60px 20px 0;
+   text-align: center;
+   /* Center everything */
+ }
+
+ .footer-container {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   /* Center columns */
+   gap: 40px;
+ }
+
+ .footer-column {
+   min-width: 200px;
+   max-width: 250px;
+   margin-bottom: 30px;
+ }
+
+ .footer-column h4 {
+   font-size: 14px;
+   font-weight: bold;
+   text-transform: uppercase;
+   color: #a5a5a5;
+   margin-bottom: 12px;
+ }
+
+ .footer-column p,
+ .footer-column a {
+   font-size: 14px;
+   line-height: 1.6;
+   color: #c7b299;
+   text-decoration: none;
+   margin: 4px 0;
+   display: inline-block;
+ }
+
+ .footer-column a:hover {
+   color: #c7b299;
+   text-decoration: underline;
+ }
+
+ .footer-bottom {
+   border-top: 1px solid #d2b48c;
+   padding: 15px 20px;
+   font-size: 13px;
+   color: #c7b299;
+   text-align: center;
+   margin-top: 30px;
+ }
+
+ .footer-bottom a {
+   color: #c7b299;
+   text-decoration: none;
+ }
+
+ .footer-bottom a:hover {
+   text-decoration: underline;
+ }
+
+ @media (max-width: 768px) {
+   .footer-container {
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .footer-column {
+     margin-bottom: 25px;
+   }
+ }
+
+ body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   color: #333;
+   background-color: #fff;
+ }
+
+ .salon-section {
+   padding: 80px 20px 60px;
+   text-align: center;
+   max-width: 1000px;
+   margin: 0 auto;
+ }
+
+ .salon-section h2 {
+   font-size: 36px;
+   font-weight: bold;
+   margin-bottom: 25px;
+ }
+
+ .salon-section p {
+   font-size: 16px;
+   line-height: 1.7;
+   max-width: 800px;
+   margin: 0 auto;
+   color: #444;
+ }
+
+ @media (max-width: 768px) {
+   .salon-section h2 {
+     font-size: 28px;
+   }
+
+   .salon-section p {
+     font-size: 15px;
+   }
+ }
+ .navbar-nav .nav-item:not(:last-child) {
+  border-right: 1px solid #999;
+  margin-right: 12px;
+  padding-right: 12px;
+}

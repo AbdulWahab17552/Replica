@@ -1,0 +1,221 @@
+ body {
+     margin: 0;
+     font-family: Arial, sans-serif;
+     overflow-x: hidden;
+ }
+
+ .top-section {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     width: 100vw;
+     padding: 20px 0;
+     background-color: white;
+ }
+
+ .bar-column {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 8px;
+     flex: 1;
+ }
+
+ .bar {
+     width: 100%;
+     height: 20px;
+     background-color: #2e2e2e;
+ }
+
+ .logo {
+     height: 120px;
+     width: auto;
+     object-fit: contain;
+ }
+
+ nav {
+     border-top: 1px solid #eee;
+     border-bottom: 5px solid #333;
+ }
+
+ .navbar-nav .nav-link {
+     color: #000;
+     padding: 10px 15px;
+ }
+
+ .navbar-nav .nav-link.active {
+     color: #c2ae9b;
+ }
+
+ /* Contact Section Styles */
+ .contact-container {
+     background-color: #373736;
+     color: #f5f5f5;
+     padding: 40px 20px;
+     text-align: center;
+ }
+
+ .contact-title {
+     font-size: 2rem;
+     font-weight: bold;
+     margin-bottom: 10px;
+     color: #c7b299;
+ }
+
+ .contact-subtitle {
+     font-size: 1.1rem;
+     color: #7f7f7f;
+     margin-bottom: 30px;
+ }
+
+ .contact-info {
+     max-width: 700px;
+     margin: 0 auto;
+     font-size: 1.05rem;
+     line-height: 1.7;
+     color: #fefefe;
+ }
+
+ .section-title {
+     font-size: 1.4rem;
+     color: #7f7f7f;
+     margin-bottom: 10px;
+ }
+
+ .contact-info address,
+ .contact-info p {
+     margin: 0;
+     padding: 4px 0;
+     font-weight: 500;
+     color: #c7b299;
+ }
+
+ .map-link,
+ .social-link {
+     display: inline-block;
+     margin-top: 8px;
+     color: #c7b299;
+     text-decoration: none;
+     font-weight: bold;
+     border-bottom: 2px solid transparent;
+     transition: all 0.3s ease;
+     font-size: 1.05rem;
+ }
+
+ .map-link:hover,
+ .social-link:hover {
+     color: #ffff;
+     border-color: #c7b299;
+ }
+
+ footer {
+     background-color: #3a3a3a;
+     color: #d5d5d5;
+     padding: 60px 20px 0;
+     text-align: center;
+     /* Center everything */
+ }
+
+ .footer-container {
+     max-width: 1200px;
+     margin: 0 auto;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     /* Center columns */
+     gap: 40px;
+ }
+
+ .footer-column {
+     min-width: 200px;
+     max-width: 250px;
+     margin-bottom: 30px;
+ }
+
+ .footer-column h4 {
+     font-size: 14px;
+     font-weight: bold;
+     text-transform: uppercase;
+     color: #a5a5a5;
+     margin-bottom: 12px;
+ }
+
+ .footer-column p,
+ .footer-column a {
+     font-size: 14px;
+     line-height: 1.6;
+     color: #c7b299;
+     text-decoration: none;
+     margin: 4px 0;
+     display: inline-block;
+ }
+
+ .footer-column a:hover {
+     color: #c7b299;
+     text-decoration: underline;
+ }
+
+ .footer-bottom {
+     border-top: 1px solid #d2b48c;
+     padding: 15px 20px;
+     font-size: 13px;
+     color: #c7b299;
+     text-align: center;
+     margin-top: 30px;
+ }
+
+ .footer-bottom a {
+     color: #c7b299;
+     text-decoration: none;
+ }
+
+ .footer-bottom a:hover {
+     text-decoration: underline;
+ }
+
+ @media (max-width: 768px) {
+     .footer-container {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .footer-column {
+         margin-bottom: 25px;
+     }
+ }
+
+ .floating-facebook {
+     position: fixed;
+     bottom: 25px;
+     right: 25px;
+     background-color: #3a3a3a;
+     /* Facebook blue */
+     color: #fff;
+     border-radius: 50%;
+     width: 50px;
+     height: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-decoration: none;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+     z-index: 1000;
+     transition: background-color 0.3s ease;
+ }
+
+ .floating-facebook:hover {
+     background-color: #2d4373;
+ }
+
+ .white-divider {
+     background-color: white;
+     height: 100px;
+     /* Adjust the height as needed */
+     width: 100%;
+ }
+ .navbar-nav .nav-item:not(:last-child) {
+  border-right: 1px solid #999;
+  margin-right: 12px;
+  padding-right: 12px;
+}
